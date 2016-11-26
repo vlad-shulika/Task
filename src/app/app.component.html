@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+
+<div class="row">
+
+  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <tt-slider-item (mouseOn)="itemPause=$event" [sliderItem]="currentItem"></tt-slider-item>
+  </div>
+  
+</div>
+<tt-slider-control [pauseTimer]="itemPause" [interval]="10" (indexItemChanged)="onIndexChanged($event)" [elementCount]="sliderItems.length"></tt-slider-control>
