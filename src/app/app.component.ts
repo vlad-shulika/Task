@@ -8,7 +8,6 @@ import { ModelSliderItem } from './slider-item.model';
 })
 export class AppComponent implements OnInit{
   @Input() indexItem : number;
-  title = 'tt works!';
   currentItem: ModelSliderItem;
   sliderItems: Array<ModelSliderItem> = new Array<ModelSliderItem>(
     {

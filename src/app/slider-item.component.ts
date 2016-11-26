@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, HostListener, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { ModelSliderItem } from './slider-item.model';
 
 @Component({
@@ -35,14 +35,10 @@ import { ModelSliderItem } from './slider-item.model';
     color: #FFF;  }
   `]
 })
-export class SliderItem implements OnInit{
-  styleObj: {};
+export class SliderItem {
   @Input() sliderItem: ModelSliderItem;
   constructor() {
             
-  }
-  ngOnInit() {
-    this.styleObj = {'background-image': this.sliderItem.hero};
   }
 
   @Output() mouseOn = new EventEmitter<boolean>(); 
